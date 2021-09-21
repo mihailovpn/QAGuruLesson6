@@ -13,6 +13,8 @@ import static org.openqa.selenium.By.partialLinkText;
 
 public class LambdaStepTest {
     public static final String  REPOSITORY = "eroshenkoam/allure-example";
+    public static final String  MENUNAME = "Issue";
+
     @Test
     void checkIssueOnGithub() {
 
@@ -26,10 +28,8 @@ public class LambdaStepTest {
         });
         step("Открываем репозиторий " + REPOSITORY, () -> $(linkText(REPOSITORY)).click());
 
-        step("Нажимаем Issues", () -> $(partialLinkText("Issues")).click());
-
-        step("Проверяем наличие #68", () -> {
-            $(byText("#68")).should(visible);
+        step("Проверяем название " + MENUNAME, () -> {
+            $(byText(MENUNAME)).should(visible);
         });
     }
 }
