@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 
 public class AnnotatedStepTest {
-    public static final String  PAGE = "Issue";
+    public static final String  PAGE = "https://github.com/";
     public static final String  REPOSITORY = "eroshenkoam/allure-example";
     public static final String  MENUNAME = "Issue";
 
